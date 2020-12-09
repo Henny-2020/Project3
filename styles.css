@@ -1,0 +1,226 @@
+/* ==============
+   VARIABLES
+   ============== */
+
+:root {
+  --color-ink: #0D0630;
+  --color-ink-alpha: hsla(252, 84%, 10%, 42%);
+  --color-blue: #173050;
+  --color-blue-alpha: hsla(214, 58%, 20%, 76%);
+  --color-blue-light: #374D78;
+  --color-green: #8BBEB2;
+  --color-yellow: #E6F9AF;
+
+  --spacing-sm: 12px;
+  --spacing-md: 24px;
+  --spacing-lg: 36px;
+
+  --transition-default: all 300ms ease-in-out;
+}
+
+/* ==============
+   UTILITY STYLES
+   ============== */
+
+.u-button-reset {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 0;
+  text-align: inherit;
+}
+
+.u-list-reset {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+
+/* ==============
+   BASE STYLES
+   ============== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-blue-light);
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  /* system font stack */
+  line-height: 1.3;
+  margin: var(--spacing-md);
+}
+
+main {
+  padding-top: 100px;
+}
+
+main a {
+  color: var(--color-green);
+}
+
+main a:hover,
+main a:focus {
+  color: var(--color-yellow);
+}
+
+
+/* ==============
+   DEMO STYLES
+   ============== */
+
+.site-header {
+  position: relative;
+}
+
+.site-header h1 {
+  display: inline-block;
+  line-height: 112px;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  width: 120px;
+}
+
+.site-header .logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.menu-icon__line {
+  background-color: white;
+  height: 2px;
+  margin: 8px auto;
+  transition: var(--transition-default);
+  width: 42px;
+}
+
+[aria-expanded=true] .menu-icon__line:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+[aria-expanded=true] .menu-icon__line:nth-child(2) {
+  opacity: 0;
+}
+
+[aria-expanded=true] .menu-icon__line:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+
+/* ==============
+   MEDIA QUERIES
+   ============== */
+
+@media (max-width: 599px) {
+  .site-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+    z-index: 1
+  }
+
+  .menu-trigger {
+    color: white;
+    padding: var(--spacing-sm);
+    transition: var(--transition-default);
+  }
+
+
+  .menu-trigger:hover,
+  .menu-trigger:focus {
+    background-color: var(--color-blue-alpha);
+    color: var(--color-yellow);
+  }
+
+  .menu-trigger[aria-expanded=true] {
+    background-color: transparent;
+    opacity: 0.72;
+  }
+
+  .menu-trigger[aria-expanded=true]:hover,
+  .menu-trigger[aria-expanded=true]:focus {
+    opacity: 1;
+  }
+
+  .menu-trigger:hover .menu-icon__line,
+  .menu-trigger:focus .menu-icon__line {
+    background: var(--color-yellow);
+  }
+
+  .menu-trigger:not([aria-expanded]) {
+    display: none;
+  }
+
+  .menu-trigger[aria-expanded=false]+.menu-list {
+    display: none;
+  }
+
+  .menu-list {
+    animation: slideIn 420ms cubic-bezier(.68, -0.55, .27, 1.55) 1;
+    background-color: var(--color-blue);
+    padding-top: 120px;
+    position: absolute;
+    top: calc(var(--spacing-md) * -1);
+    right: calc(var(--spacing-md) * -1);
+    transform-origin: top;
+    width: 65vw;
+    z-index: -1;
+  }
+
+  .menu-list.full-screen {
+    animation-duration: 480ms;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: unset;
+  }
+
+  .menu-list a {
+    color: var(--color-yellow);
+    display: block;
+    font-size: 1.3em;
+    padding: var(--spacing-md) var(--spacing-lg);
+    text-align: center;
+    text-decoration: none;
+    transition: var(--transition-default);
+  }
+
+  .menu-list a:hover,
+  .menu-list a:focus {
+    background-color: var(--color-ink-alpha);
+  }
+}
+
+@media (min-width: 600px) {
+  .menu-trigger {
+    display: none;
+  }
+}
+
+/* ==============
+   ANIMATION
+   ============== */
+
+@keyframes slideIn {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
+
