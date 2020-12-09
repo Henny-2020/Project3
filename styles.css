@@ -34,4 +34,24 @@
 [aria-expanded=true] .menu-icon__line:nth-child(3) {
   transform: translateY(-10px) rotate(-45deg);
 }
+media (max-width: 599px) {
+   /* If the JavaScript doesn't load, this hides the button */
+  .site-nav > button:not([aria-expanded]) {
+    display: none;
+  }
+  /* Don't show the menu (the UL element) when aria-expanded attribute is set to false */
+  /* This attribute is toggled by the code in menu.js */
+  .site-nav > button[aria-expanded=false] + ul {
+    display: none;
+  }
+}
+
+/* When the browser width is 600px or more, don't show the menu button */
+@media (min-width: 600px) {
+  .site-nav > button {
+    display: none;
+  }
+}
+
+
 
