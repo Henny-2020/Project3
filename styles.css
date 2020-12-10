@@ -223,4 +223,7 @@ main a:focus {
     transform: scaleY(1);
   }
 }
-
+img {
+  max-width: 30%;
+  height: auto;
+}
