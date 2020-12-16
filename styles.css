@@ -220,6 +220,11 @@ main a:focus {
 img {
   max-width: 30%;
   height: auto;
+  vertical-align: middle;
+}
+p
+{
+  display: inline-block;
 }
 
 .title
@@ -246,3 +251,4 @@ img {
 {
 
 }
+
