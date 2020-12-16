@@ -3,14 +3,6 @@
    ============== */
 
 :root {
-  --color-ink: #0D0630;
-  --color-ink-alpha: hsla(252, 84%, 10%, 42%);
-  --color-blue: #173050;
-  --color-blue-alpha: hsla(214, 58%, 20%, 76%);
-  --color-blue-light: #374D78;
-  --color-green: #8BBEB2;
-  --color-yellow: #E6F9AF;
-
   --spacing-sm: 12px;
   --spacing-md: 24px;
   --spacing-lg: 36px;
@@ -50,7 +42,7 @@
 }
 
 body {
-  background-color: white;
+  background-color: silver;
   color: black;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   /* system font stack */
@@ -63,12 +55,12 @@ main {
 }
 
 main a {
-  color: var(--color-green);
+  color: #444;
 }
 
 main a:hover,
 main a:focus {
-  color: var(--color-yellow);
+  color: black;
 }
 
 
@@ -97,7 +89,7 @@ main a:focus {
 }
 
 .menu-icon__line {
-  background-color: white;
+  background-color: silver;
   height: 2px;
   margin: 8px auto;
   transition: var(--transition-default);
@@ -131,7 +123,8 @@ main a:focus {
   }
 
   .menu-trigger {
-    color: white;
+    background-color: #141518;
+    color: silver;
     padding: var(--spacing-sm);
     transition: var(--transition-default);
   }
@@ -139,8 +132,8 @@ main a:focus {
 
   .menu-trigger:hover,
   .menu-trigger:focus {
-    background-color: var(--color-blue-alpha);
-    color: var(--color-yellow);
+    background-color: black;
+    color: white;
   }
 
   .menu-trigger[aria-expanded=true] {
@@ -155,7 +148,7 @@ main a:focus {
 
   .menu-trigger:hover .menu-icon__line,
   .menu-trigger:focus .menu-icon__line {
-    background: var(--color-yellow);
+    background-color: white;
   }
 
   .menu-trigger:not([aria-expanded]) {
@@ -168,7 +161,7 @@ main a:focus {
 
   .menu-list {
     animation: slideIn 420ms cubic-bezier(.68, -0.55, .27, 1.55) 1;
-    background-color: var(--color-blue);
+    background-color: #141518;
     padding-top: 120px;
     position: absolute;
     top: calc(var(--spacing-md) * -1);
@@ -189,7 +182,7 @@ main a:focus {
   }
 
   .menu-list a {
-    color: var(--color-yellow);
+    color: silver;
     display: block;
     font-size: 1.3em;
     padding: var(--spacing-md) var(--spacing-lg);
@@ -200,7 +193,8 @@ main a:focus {
 
   .menu-list a:hover,
   .menu-list a:focus {
-    background-color: var(--color-ink-alpha);
+    background-color: black;
+    color: white;
   }
 }
 
