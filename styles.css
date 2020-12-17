@@ -202,7 +202,10 @@ main a:focus {
   .menu-trigger {
     display: none;
   }
-  
+  @media (max-width: 601px) {
+  img {
+    display: inline-block;
+  }
 
   }
 }
