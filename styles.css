@@ -217,10 +217,16 @@ main a:focus {
     transform: scaleY(1);
   }
 }
+.panelists
+{
+  font-size: 34px;
+  text-align: center;
+}
 img {
   max-width: 30%;
   height: auto;
   vertical-align: middle;
+  padding-bottom: 20px;
 }
 /* Corrects the layout around floated elements */
 .clearfix::before,
@@ -275,9 +281,6 @@ body {
   text-align: center;
 }
 
-.panelists
-{
-  text-align: center;
-}
+
 
 
