@@ -222,7 +222,44 @@ img {
   height: auto;
   vertical-align: middle;
 }
+/* Corrects the layout around floated elements */
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+.clearfix::after {
+  clear: both;
+}
 
+/* ==============
+   BASE STYLES
+   ============== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FCFCFC;
+  color: var(--color-slate);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  /* system font stack */
+  line-height: 1.3;
+  margin: 24px;
+}
+
+/* ======================
+   DEMO STYLES
+   ====================== */
+
+.speaker-details img {
+  float: left;
+  height: auto;
+  margin-right: 18px;
+  width: 220px;
+}
 .title
 {
  text-align: center; 
