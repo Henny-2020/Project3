@@ -225,11 +225,14 @@ main a:focus {
 }
 h3 {
   text-align: center;
+
 }
+
 img {
   max-width: 30%;
   height: auto;
   vertical-align: middle;
+  padding-top: 100
   padding-bottom: 100px;
 }
 /* Corrects the layout around floated elements */
