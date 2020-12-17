@@ -113,7 +113,6 @@ main a:focus {
    MEDIA QUERIES
    ============== */
 
-@media (max-width: 599px) {
   .site-nav {
     position: absolute;
     top: 0;
@@ -202,10 +201,6 @@ main a:focus {
   .menu-trigger {
     display: none;
   }
-  @media (max-width: 601px) {
-  img {
-    display: inline-block;
-  }
 
   }
 }
@@ -225,7 +220,7 @@ main a:focus {
 }
 
 h1 {
-  padding-top: 100px;
+  padding-top: 5px;
 }
 .panelists
 {
