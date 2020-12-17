@@ -225,6 +225,7 @@ main a:focus {
 }
 h3 {
   text-align: center;
+  font-size: 26px;
 
 }
 
@@ -232,7 +233,7 @@ img {
   max-width: 30%;
   height: auto;
   vertical-align: middle;
-  padding-top: 100
+  padding-top: 60px;
   padding-bottom: 100px;
 }
 /* Corrects the layout around floated elements */
