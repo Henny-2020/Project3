@@ -303,10 +303,18 @@ body {
   text-align: center;
 }
 
-.buytickets{
- position: relative;
-  padding-left: 300px;
+.buytickets {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 14px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
+
+
 
 
 
