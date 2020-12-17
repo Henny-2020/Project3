@@ -121,7 +121,8 @@ main a:focus {
   }
 
   .menu-trigger {
-    color: white;
+    background-color: #141518;
+    color: silver;
     padding: var(--spacing-sm);
     transition: var(--transition-default);
   }
@@ -129,8 +130,8 @@ main a:focus {
 
   .menu-trigger:hover,
   .menu-trigger:focus {
-    background-color: var(--color-blue-alpha);
-    color: var(--color-yellow);
+    background-color: black;
+    color: white;
   }
 
   .menu-trigger[aria-expanded=true] {
@@ -145,7 +146,7 @@ main a:focus {
 
   .menu-trigger:hover .menu-icon__line,
   .menu-trigger:focus .menu-icon__line {
-    background: var(--color-yellow);
+    background-color: white;
   }
 
   .menu-trigger:not([aria-expanded]) {
@@ -158,7 +159,7 @@ main a:focus {
 
   .menu-list {
     animation: slideIn 420ms cubic-bezier(.68, -0.55, .27, 1.55) 1;
-    background-color: var(--color-blue);
+    background-color: #141518;
     padding-top: 120px;
     position: absolute;
     top: calc(var(--spacing-md) * -1);
@@ -179,7 +180,7 @@ main a:focus {
   }
 
   .menu-list a {
-    color: var(--color-yellow);
+    color: silver;
     display: block;
     font-size: 1.3em;
     padding: var(--spacing-md) var(--spacing-lg);
@@ -190,7 +191,8 @@ main a:focus {
 
   .menu-list a:hover,
   .menu-list a:focus {
-    background-color: var(--color-ink-alpha);
+    background-color: black;
+    color: white;
   }
 }
 
