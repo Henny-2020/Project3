@@ -303,8 +303,8 @@ body {
   text-align: center;
 }
 
-.buytickets {
-  background-color: #4CAF50; /* Green */
+button {
+  background-color: black;
   border: none;
   color: white;
   padding: 14px 40px;
