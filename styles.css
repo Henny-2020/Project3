@@ -111,6 +111,8 @@ main a:focus {
    MEDIA QUERIES
    ============== */
 
+
+
 @media (max-width: 599px) {
   .site-nav {
     position: absolute;
@@ -119,6 +121,32 @@ main a:focus {
     text-align: right;
     z-index: 1
   }
+}
+  
+  @media (max-width:999px) {
+  .speaker-details img {
+  float: left;
+  margin-right: 18px;
+    width:33%;
+    
+}
+}
+  
+@media (min-width:1000px) {
+  .speaker-details {
+    display: inline-block;
+
+    vertical-align: top;
+    width:33%;
+  }
+  
+  
+  .speaker-details img {
+    display: block;
+    margin: auto;
+    padding-top: 0;
+  }
+}
 
   .menu-trigger {
     background-color: #141518;
@@ -270,20 +298,16 @@ h3 {
 }
 
 img {
-  width: 30%;
+  max-width: 60%;
   height: auto;
   vertical-align: middle;
   padding-top: 60px;
   padding-bottom: 100px;
 }
 
-.speaker-details img {
-  float: left;
-  height: auto;
-  margin-right: 18px;
-  width: 220px;
-}
+
 .title {
+  font-size: 38px;
   text-align: center;
 }
 
